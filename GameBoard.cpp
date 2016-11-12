@@ -10,8 +10,12 @@
 // If the landing square is a ladder, set the position to the corresponding higher square
 // Player climbs up to the higher square
 // Otherwise, player stays put at the landing square
-// TO DO: implement this method
+
 void GameBoard::buildBoard() {
-   // TODO: implement this function properly
-   throw std::logic_error("not implemented yet");
+   // CHECKS EVERY SQUARE TO SEE IF CONTAINS A CHUTE, LADDER OR NEITHER.
+   for (int i = 0; i < BOARD_SIZE; i++)
+   {
+      // MOVES POSITION ACCORDINGLY: CLIMBS UP, SLIDES DOWN, OR STAYS PUT
+      CELL[i] = checkChutesLadders[i];
+   }
 }
